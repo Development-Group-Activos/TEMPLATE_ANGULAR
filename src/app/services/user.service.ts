@@ -1,21 +1,20 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { User } from '../models/user';
+import { User } from '../models/user';  // Verifica que el modelo esté definido
+
+import { environment } from '../../environments/environment.development';  // Importa el entorno
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
-
-  private apiUrl = 'http://localhost:7001/api/rest/consecutivo';  // Cambia a la URL de tu backend
+  private baseUrl = environment.baseUrl;  // Cambia 'apiUrl' a 'baseURL'
 
   constructor(private http: HttpClient) { }
 
-  // Métodos para obtener la informacion del del backend
-  /*ejemplo
   getUser(): Observable<User> {
-    return this.http.get<User>(${this.apiUrl}/user);
+    return this.http.get<User>(${this.baseUrl}/user); // Sin pasar opciones
   }
-    */
+
 }

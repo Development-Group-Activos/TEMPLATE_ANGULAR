@@ -1,1 +1,8 @@
 <h1>Bienvenido a la página de Inicio</h1>
+<div *ngIf="user">
+  <p>ID: {{ user.idUser }}</p>
+  <p>Nombre: {{ user.nameUser }}</p>
+</div>
+<div *ngIf="!user">
+  <p>Cargando usuario...</p>
+</div>
