@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { User } from '../models/user';  // Verifica que el modelo esté definido
+import { User } from '../models/user';  
 
-import { environment } from '../../environments/environment.development';  // Importa el entorno
+import { environment } from '../../environments/environment.development';  
 11111
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
-  private baseUrl = environment.baseUrl;  // Cambia 'apiUrl' a 'baseURL'
+  private baseUrl = environment.baseUrl;  
 
   constructor(private http: HttpClient) { }
 
